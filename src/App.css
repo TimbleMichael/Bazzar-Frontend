@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Homepage-back1 {
+  background: url(images/back1.jpg);
+  background-repeat: no-repeat;
+  height: 94vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.Navbar-logo {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #1D9637;
+  margin-left: 105px;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0px 35px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav .link {
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  color: #1D9637;
+}
+
+.Homepage-text1,
+.About-text1,
+.Share-text1
+ {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+  padding: 400px 0px;
+}
+
+.Homepage-text2,
+.About-text2, 
+.Share-text2
+{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px black;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: -400px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.About-back2 {
+  background: url(images/back2.jpg);
+  background-repeat: no-repeat;
+  height: 98vh;
+}
+
+.Share-back3 {
+  background: url(images/back3.jpg);
+  background-repeat: no-repeat;
+  height: 93vh;
+}
+
+.About-text2 p, 
+.Share-text2 p
+{
+  margin: 1px;
+}
+
+.footer {
+  background: black;
+  margin-top: -20px;
+  padding: 15px;
+  color: #fff;
+}
+
+.logo1 {
+  font-size: large;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  display: table;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.logo2 {
+  font-size: large;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  display: table;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.button-nav:hover,
+.signup-button:hover,
+.signin-button:hover {
+  background-color: #1D9637 !important;
+}
+
+.submit {
+  display: flex;
+  padding-top: 175px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin: 0px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.submit-signin {
+  display: flex;
+  padding-top: 1px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Signup-back,
+.Signin-back {
+  background: #1D9637;
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.Signup-heading,
+.Signin-heading {
+  margin-top: -35px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Signup-subtext {
+  font-size: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-properties,
+.signup-button,
+.signin-button {
+  width: 300px;
 }
+
+.square {
+ height: 350px;
+ width: 400px;
+ border-radius: 12px;
+ background-color: white;
+ margin: 10px auto;
+}
+
+.square-signin {
+  height: 250px;
+  width: 400px;
+  border-radius: 12px;
+  background-color: white;
+  margin: 10px auto;
+ }
+
+.signinpage-heading {
+  text-align: center;
+  font-size: 19px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: -60px;
+}
+
+.signuppage-heading {
+  text-align: center;
+  font-size: 19px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: -50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #1D9637;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
