@@ -1,10 +1,10 @@
 import axios from "axios";
-import React from "react"
-import { useState } from 'react';
+import React, { useContext } from "react"
 import { useNavigate } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { signUpContext } from "../Context";
 
 // Using 'Functional Component'
 // Ensure function name is the same name as file name, and start with a capital.
@@ -14,12 +14,14 @@ function Signup() {
     // By default, email, password, and password_confirmation will be empty -> signUpInfo, which is the initial state
     // Then the info will be updated via setSignUpInfo
     // i.e FIRST item in array is ALWAYS the CURRENT STATE, and the SECOND item in array is the function that allows CURRENT STATE to be UPDATED.
-    const[signUpInfo, setSignUpInfo] = useState({
-        email: "",
-        password: "",
-        password_confirmation: ""
+    // const[signUpInfo, setSignUpInfo] = useState({
+    //     email: "",
+    //     password: "",
+    //     password_confirmation: ""
 
-    });
+    // });
+
+    const { signUpInfo, setSignUpInfo } = useContext(signUpContext)
 
     // Defining when the initial state gets updated.
     // Taking the previous state with spread operator (...), and CHANGING "event.target.name" (username, password, passowrd_conrimation),

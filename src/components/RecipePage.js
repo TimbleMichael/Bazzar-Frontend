@@ -1,67 +1,60 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import axios from "axios";
-import { useState } from "react";
-import Signout from "./Signout";
+import { loggedInContext } from "../Context";
+import RecipeShow from "./RecipeShow";
+import { useNavigate } from 'react-router-dom'
+import RecipePageNav from "./RecipePageNav";
+
 
 function RecipePage() {
 
-    const[loggedIn, setLoggedIn] = useState({
-        loggedInStatus: "NOT_LOGGED_IN",
-        user: {}
-    })
 
-    // const handleLogin = () => {
+    let navigate = useNavigate();
 
-    //     axios.get("http://localhost:3001/logged_in")
-    //         .then(response => {
-    //             console.log(response.data)
-    //             if(response.data.logged_in) {
-    //                 setLoggedIn ({loggedInStatus: "LOGGED_IN", user: response.user}) 
-    //             }
-    //             else {
-    //                 setLoggedIn({loggedInStatus: "NOT_LOGGED_IN", user: {}})
-    //             }
-    //         })
-    // }
+    const { loggedIn, setLoggedIn } = useContext(loggedInContext)
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/logged_in")
+    const handleLogin = () => {
+        axios.get("http://localhost:3001/logged_in", { withCredentials: true })
             .then(response => {
-                console.log(response)
                 if(response.data.logged_in) {
-                    setLoggedIn ({loggedInStatus: "LOGGED_IN", user: response.user}) 
+                    setLoggedIn({...loggedIn, loggedInStatus: true, user: response.data.user.email})
                 }
-                else {
-                    setLoggedIn({loggedInStatus: "NOT_LOGGED_IN", user: {}})
+                // else {
+                //     setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
+                //     navigate("/")
+                // }
+            })
+    };
+
+    const handleLogout = () => {
+        axios.delete("http://localhost:3001/logout", { withCredentials: true })
+            .then(response => {
+                if(response.data.logged_out) {
+                    setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
+                    navigate("/")
                 }
             })
-    }, [])
+    };
 
-    const[recipe, setRecipe] = useState({
-        title: "",
-        servingSize: "",
-        cookTime: "",
-        prepTime: "",
-        ingredients: "",
-        method: ""
-    });
-
+    useEffect(() => {
+        handleLogin()
+        
+    }, []);
 
     return(
         <div>
-            <p>{loggedIn.loggedInStatus}</p>
-            <h1>Food lives her</h1>
 
-            <Signout/>
-           
+            <RecipePageNav handleLogout={handleLogout}/>
 
+            <h3>Welcome: {JSON.stringify(loggedIn.user)}</h3>
+            
+            <RecipeShow/>
 
         </div>
 
     )
 
-    
-}
+};
 
 
 

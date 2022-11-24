@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { signInContext } from '../Context';
 
 
 function Signin() {
 
-  const[signInInfo, setSignInInfo] = useState({
-    email: "",
-    password: ""
-  });
+  const { signInInfo, setSignInInfo } = useContext(signInContext);
 
   const handleChange = (event) => {
     setSignInInfo({...signInInfo, [event.target.name]: event.target.value})
@@ -41,7 +39,7 @@ function Signin() {
   return(
     <div className='Signin-back'>
 
-      <h1 className='Signin-heading'>Sign in</h1>
+      <h1 className='Signin-heading'>Login</h1>
 
       <div className="square-signin"></div>
 

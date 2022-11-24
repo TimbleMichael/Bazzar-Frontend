@@ -1,9 +1,8 @@
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 .Homepage-back1 {
@@ -120,13 +119,14 @@ body {
 
 .button-nav:hover,
 .signup-button:hover,
-.signin-button:hover {
+.signin-button:hover,
+.recipe-post-button:hover {
   background-color: #1D9637 !important;
 }
 
 .submit {
   display: flex;
-  padding-top: 175px;
+  padding-top: 170px;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -156,7 +156,7 @@ body {
 
 .Signup-back,
 .Signin-back {
-  background: #1D9637;
+  background: white;
   height: 100vh;
   padding-top: 150px;
 }
@@ -168,7 +168,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 35px;
   font-weight: 600;
-  color: white;
+  color: #1D9637;
 }
 
 .Signup-subtext {
@@ -181,13 +181,15 @@ body {
 .submit-properties,
 .signup-button,
 .signin-button {
-  width: 300px;
+  width: 350px;
 }
 
 .square {
  height: 350px;
  width: 400px;
  border-radius: 12px;
+ border: 2px solid;
+ border-color: #1D9637;
  background-color: white;
  margin: 10px auto;
 }
@@ -197,7 +199,10 @@ body {
   width: 400px;
   border-radius: 12px;
   background-color: white;
+  border: 2px solid;
+  border-color: #1D9637;
   margin: 10px auto;
+  
  }
 
 .signinpage-heading {
@@ -219,15 +224,165 @@ body {
   color: #1D9637;
 }
 
+.Recipe-heading {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  margin-left: 100px;
+}
+
+.recipe-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  background-color: #1D9637; 
+}
+
+.recipe-nav ul {
+  padding: 0;
+  margin: 0px 35px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.Logout-button:hover,
+.create-button:hover {
+  background-color: white !important;
+}
+
+.create-link {
+  text-decoration: none;
+}
+
+.card-style {
+  width: 500px;
+  text-align: center;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.recipe-back {
+  background-color: white;
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.recipe-submit {
+  display: flex;
+  padding-top: 450px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 0px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.recipe-properties {
+  width: 450px;
+}
+
+.recipe-square {
+  height: 700px;
+  width: 500px;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #1D9637;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.recipe-post-button {
+  width: 450px;
+}
+
+.recipe-title-head {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  margin-top: -780px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #1D9637;
+}
+
+.accordion-style {
+  display: inline-block;
+  width: 100%;
+}
+
+.accordion-info {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+.info-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 75px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.info-general {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 15px;
+}
+
+.info-ingredients {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 50px;
+}
+
+.info-method {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 50px;
+}
+
+                                            /* Building responsive queries for devices with less than 600px width */
 
 
 
+@media screen and (max-height: 2000px) {
 
+}
 
+@media screen and (max-height: 1500px) {
 
+}
 
+@media screen and (max-height: 1000px) {
 
+}
+                                            
 
-
-
-
+@media screen and (max-height: 900px) {
+  .submit {
+    padding-top: 250px;
+  }
+}
