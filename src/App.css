@@ -120,7 +120,8 @@
 .button-nav:hover,
 .signup-button:hover,
 .signin-button:hover,
-.recipe-post-button:hover {
+.recipe-post-button:hover,
+.comment-button {
   background-color: #1D9637 !important;
 }
 
@@ -192,6 +193,7 @@
  border-color: #1D9637;
  background-color: white;
  margin: 10px auto;
+ box-shadow: 30px 30px 50px 60px #ccc;
 }
 
 .square-signin {
@@ -259,13 +261,23 @@
 }
 
 .card-style {
-  width: 500px;
+  width: 550px;
   text-align: center;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 10px  6px #ccc;
+}
+
+.card-info {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+
 }
 
 .title-text {
@@ -295,6 +307,7 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  
 }
 
 .recipe-properties {
@@ -309,6 +322,7 @@
   border-color: #1D9637;
   background-color: white;
   margin: 10px auto;
+  box-shadow: 30px 30px 50px 15px #ccc;
 }
 
 .recipe-post-button {
@@ -322,17 +336,6 @@
   margin-top: -780px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #1D9637;
-}
-
-.accordion-style {
-  display: inline-block;
-  width: 100%;
-}
-
-.accordion-info {
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
 }
 
 .info-title {
@@ -364,6 +367,122 @@
   margin-top: 50px;
 }
 
+.error {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 900;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #1D9637;
+}
+
+.error-gif {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #1D9637;
+}
+
+.card-style-comment {
+  width: 950px;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  box-shadow: 3px 10px  6px #ccc;
+  
+}
+
+.comment-heading {
+  margin-left: 25%;
+  font-size: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+.comment-box {
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 5px 20px;
+  box-shadow: 3px 10px  6px #ccc;
+}
+
+.comment {
+  position: relative;
+}
+
+.comment-button {
+  position: absolute;
+  right: 950px;
+  top: -20px;
+}
+
+.recipe-info-card {
+  box-shadow: 5px 10px 18px 5px grey;
+  width: fit-content;
+  border: 5px solid #1D9637;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+.userName {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: 180px;
+  color: white;
+
+}
+
+.comment-user {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1D9637;
+  margin-top: 2px;
+}
+
+.recipe-user {
+  font-weight: 600;
+  font-size: 20px;
+  color: #1D9637;
+  margin-left: 85%;
+}
+
+.recipe-like {
+  margin-left: -85%;
+  margin-top: -20px;
+}
+/* .reply-button {
+  top: 10px;
+}
+
+.reply-form {
+  margin-left: 25%;
+  margin-top: 20px;
+}
+
+.reply-post {
+  left: 10px;
+  top: -12px;
+}   */
+
+
+
                                             /* Building responsive queries for devices with less than 600px width */
 
 
@@ -383,6 +502,6 @@
 
 @media screen and (max-height: 900px) {
   .submit {
-    padding-top: 250px;
+    padding-top: 180px;
   }
 }
