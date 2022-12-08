@@ -6,9 +6,19 @@ import Signin from './components/Signin';
 import RecipePage from './components/RecipePage';
 import Signup from './components/Signup';
 import RecipeCreate from './components/RecipeCreate';
-import CommentsPage from './components/CommentsPage';
 import RecipeInfo from './components/RecipeInfo';
-import { signUpContext, loggedInContext, signInContext, recipeContext, reciepCreateContext, commentContext } from './Context';
+import Error from './components/Error';
+import { signUpContext, 
+         loggedInContext, 
+         signInContext, 
+         recipeContext, 
+         reciepCreateContext, 
+         commentContext, 
+         getCommentContext,
+         getUserInfoContext,
+         likeContext,
+         clickContext,
+         getLikeContext } from './Context';
 import { useState, useMemo } from 'react';
 
 
@@ -63,6 +73,16 @@ function App() {
 
   const commentPost = useMemo(() => ({comment, setComment}), [comment, setComment]);
 
+  // Context for getting Comments
+  const [getComment, setGetComment] = useState('');
+
+  const showComment = useMemo(() => ({getComment, setGetComment}), [getComment, setGetComment]);
+
+  // Context for getting User Info
+  const [userInfo, setUserInfo] = useState('');
+
+  const showUserInfo = useMemo(() => ({userInfo, setUserInfo}), [userInfo, setUserInfo]);
+
   return (
     <BrowserRouter>
       <signUpContext.Provider value={signUp}>
@@ -71,15 +91,19 @@ function App() {
       <recipeContext.Provider value={recipeGetDetails}>
       <reciepCreateContext.Provider value={recipeCreate}>
       <commentContext.Provider value={commentPost}>
+      <getCommentContext.Provider value={showComment}>
+      <getUserInfoContext.Provider value={showUserInfo}>
         <Routes>
             <Route path="/" element={<Homepage/>} exact />
             <Route path="/Signin" element={<Signin/>} exact />
             <Route path="/Signup" element={<Signup/>} exact />
             <Route path="/RecipePage" element={<RecipePage/>} exact />
             <Route path="/RecipeCreate" element={<RecipeCreate/>} exact />
-            <Route path="/CommentsPage" element={<CommentsPage/>} exact />
             <Route path="/RecipeInfo/:id" element={<RecipeInfo />} exact/>
-        </Routes>
+            <Route path="*" element={<Error />} exact/>
+        </Routes>    
+      </getUserInfoContext.Provider>
+      </getCommentContext.Provider>
       </commentContext.Provider>
       </reciepCreateContext.Provider>
       </recipeContext.Provider>
