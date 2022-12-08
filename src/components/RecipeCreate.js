@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from "react";
 import axios from "axios";
-import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
@@ -19,10 +18,10 @@ function RecipeCreate() {
                 if(response.data.logged_in) {
                     setLoggedIn({...loggedIn, loggedInStatus: true, user: response.data.user})
                 }
-                // else {
-                //     setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
-                //     navigate("/")
-                // }
+                else {
+                    setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
+                    navigate("/")
+                }
             })
     };
 
