@@ -17,12 +17,12 @@ function RecipePage() {
         axios.get("http://localhost:3001/logged_in", { withCredentials: true })
             .then(response => {
                 if(response.data.logged_in) {
-                    setLoggedIn({...loggedIn, loggedInStatus: true, user: response.data.user.email})
+                    setLoggedIn({...loggedIn, loggedInStatus: true, user: response.data.user})
                 }
-                // else {
-                //     setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
-                //     navigate("/")
-                // }
+                else {
+                    setLoggedIn({...loggedIn, loggedInStatus: false, user: {}})
+                    navigate("/")
+                }
             })
     };
 
@@ -44,10 +44,8 @@ function RecipePage() {
     return(
         <div>
 
-            <RecipePageNav handleLogout={handleLogout}/>
+            <RecipePageNav handleLogout={handleLogout} userInfo={loggedIn.user.email}/>
 
-            <h3>Welcome: {JSON.stringify(loggedIn.user)}</h3>
-            
             <RecipeShow/>
 
         </div>
@@ -59,4 +57,4 @@ function RecipePage() {
 
 
 
-export default RecipePage
+export default RecipePage;
