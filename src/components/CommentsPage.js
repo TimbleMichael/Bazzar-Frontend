@@ -1,12 +1,28 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useContext } from "react";
-import { commentContext, recipeContext, loggedInContext } from "../Context";
+import { commentContext, loggedInContext } from "../Context";
 import { Button } from "@mui/material";
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 
 function CommenetsPage({recipeId}) {
+
+    const { loggedIn, setLoggedIn } = useContext(loggedInContext);
+
+    const handleUserIdForComment = () => {
+        axios.get("http://localhost:3001/logged_in", { withCredentials: true })
+            .then(response => {
+                if(response.data.logged_in) {
+                    setLoggedIn({...loggedIn, loggedInStatus: true, user: response.data.user})
+                }
+            })
+    };
+
+    useEffect(() => {
+        handleUserIdForComment()
+
+    }, [])
 
     const { comment, setComment } = useContext(commentContext);
 
@@ -15,13 +31,17 @@ function CommenetsPage({recipeId}) {
     };
 
     const handleSubmit = (event) => {
-        event.preventDeafault()
+        event.preventDefault()
 
         axios.post("http://localhost:3001/comments", {
-            body: comment.body
+            body: comment.body,
+            recipe_id: recipeId,
+            user_id: loggedIn.user.id
         })
         .then(response => {
-            console.log(response.data)
+            if(response.data.status === 'created') {
+                window.location.reload();
+            }
         })
         .catch(error => {
             console.log(error)
@@ -29,20 +49,27 @@ function CommenetsPage({recipeId}) {
     };
 
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <textarea
-                    style={{width: 450, height: 150}}
-                    className="textarea-prop"
+        <div className="comment-section">
+            <form className="comment" onSubmit={handleSubmit}>
+                <TextareaAutosize
+                    className="comment-box"
+                    style={{width: 950, height: 50, borderRadius: 5}}
                     type="textarea"
                     name="body"
-                    placeholder="Comment"
+                    placeholder="Start the conversation"
                     value={comment.body}
                     onChange={handleChange}
+                    required
                 />
-
+                
                 <Button
-                    type="text"
+                    className="comment-button"
+                    type="submit" 
+                    variant="contained" 
+                    sx={{
+                        background: '#1D9637',
+                        boxShadow: 3
+                    }}
                 >
                     Post
                 </Button>
@@ -50,10 +77,6 @@ function CommenetsPage({recipeId}) {
                 
 
             </form>
-
-            {console.log(recipeId)}
-
-         
            
         </div>
 
