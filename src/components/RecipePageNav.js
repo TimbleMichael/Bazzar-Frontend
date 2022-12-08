@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-function RecipePageNav({handleLogout}) {
+function RecipePageNav({handleLogout, userInfo}) {
 
     return(
         <nav className="recipe-nav">
@@ -12,6 +12,11 @@ function RecipePageNav({handleLogout}) {
             
             <div className="recipe-nav">
                 <ul>
+                    <li>
+                        <div className="userName">
+                            Welcome, {typeof userInfo === 'string' ? userInfo.split('@')[0] : "ERROR"}
+                        </div>
+                    </li>
                     <li>
                         <Link className="create-link" to='/RecipeCreate'>
                             <Button
