@@ -193,7 +193,7 @@
  border-color: #1D9637;
  background-color: white;
  margin: 10px auto;
- box-shadow: 30px 30px 50px 60px #ccc;
+ box-shadow: 30px 30px 50px 6px #ccc;
 }
 
 .square-signin {
@@ -204,7 +204,7 @@
   border: 2px solid;
   border-color: #1D9637;
   margin: 10px auto;
-  
+  box-shadow: 30px 30px 50px 6px #ccc;
  }
 
 .signinpage-heading {
@@ -314,6 +314,10 @@
   width: 450px;
 }
 
+.textarea-prop {
+  width: 450px;
+}
+
 .recipe-square {
   height: 700px;
   width: 500px;
@@ -410,6 +414,7 @@
 
 .comment-box {
   margin-left: 25%;
+  width: 950px;
   margin-top: 10px;
   margin-bottom: 50px;
   padding: 5px 20px;
@@ -463,45 +468,972 @@ hr {
   margin-left: 85%;
 }
 
-.recipe-like {
-  margin-left: -85%;
-  margin-top: -20px;
-}
-/* .reply-button {
-  top: 10px;
-}
+/* Optimising for responsive width */
 
-.reply-form {
-  margin-left: 25%;
-  margin-top: 20px;
-}
+@media screen and (max-width: 1400px) {
 
-.reply-post {
-  left: 10px;
-  top: -12px;
-}   */
+  .comment {
+    position: relative;
+  }
 
+  .comment-button {
+    position: relative;
+    left: -800px;
+    top: -20px;
+  }
 
-
-                                            /* Building responsive queries for devices with less than 600px width */
-
-
-
-@media screen and (max-height: 2000px) {
-
+  .comment-box,
+  .card-style-comment {
+    width: 800px;
+  }
+  
 }
 
-@media screen and (max-height: 1500px) {
+@media screen and (max-width: 1300px) {
 
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -700px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 700px;
+  }
+  
+}
+
+@media screen and (max-width: 1200px) {
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -650px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 650px;
+  }
+  
+}
+
+@media screen and (max-width: 1100px) {
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -600px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 600px;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -600px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 600px;
+  }
+
+  .recipe-nav-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .userName {
+    margin-left: 180px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: 5px;
+    top: -10px;
+  }
+
+
+  
+}
+
+@media screen and (max-width: 900px) {
+  .Navbar-logo {
+    margin-left: 25px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Homepage-text1,
+  .About-text1,
+  .Share-text1 {
+    font-size: 80px;
+  }
+
+  .Homepage-text2,
+  .About-text2, 
+  .Share-text2 {
+    font-weight: 500;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -600px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 600px;
+  }
+
+  .userName {
+    margin-left: 180px;
+    font-size: 25px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: 5px;
+    top: -10px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .Homepage-text1,
+  .About-text1,
+  .Share-text1 {
+    font-size: 60px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -500px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 500px;
+  }
+
+  .userName {
+    margin-left: 180px;
+    font-size: 20px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -10px;
+    top: -10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Homepage-text1,
+  .About-text1,
+  .Share-text1 {
+    font-size: 50px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -400px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 400px;
+  }
+
+  .userName {
+    margin-left: 100px;
+    font-size: 20px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -40px;
+    top: -10px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .Homepage-text1,
+  .About-text1,
+  .Share-text1 {
+    font-size: 40px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -350px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 350px;
+  }
+
+  .userName {
+    margin-left: 100px;
+    font-size: 25px;
+  }
+
+  .Recipe-heading {
+    font-size: 25px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -45px;
+    top: -10px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .Homepage-text1,
+  .About-text1,
+  .Share-text1 {
+    font-size: 30px;
+  }
+
+  .recipe-square {
+    width: 450px;
+
+  }
+
+  .recipe-properties,
+  .textarea-prop,
+  .recipe-post-button {
+    width: 400px;
+  }
+
+  .recipe-title-head {
+    font-size: 30px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -250px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 250px;
+  }
+
+  .userName {
+    margin-left: 10px;
+    font-size: 25px;
+  }
+
+  .card-style {
+    width: 450px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -85px;
+    top: -10px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .logo1 {
+    font-size: 20px;
+  }
+
+  .logo2 {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .square,
+  .square-signin {
+    width: 350px;
+
+  }
+
+  .submit-properties,
+  .signup-button,
+  .signin-button {
+    width: 320px;
+  }
+
+  .recipe-square {
+    width: 350px;
+  }
+
+  .recipe-properties,
+  .recipe-post-button,
+  .textarea-prop {
+    width: 320px;
+  }
+
+  .recipe-title-head {
+    font-size: 25px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: -200px;
+    top: -20px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 200px;
+  }
+
+  .userName {
+    margin-left: 100px;
+    font-size: 20px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -50px;
+    top: -10px;
+  }
+
+  .Recipe-heading {
+    margin-left: 10px;
+  }
+
+  .card-style {
+    width: 290px;
+  }
+
+}
+
+@media screen  and (max-width: 350px) {
+  .square,
+  .square-signin {
+    width: 300px;
+
+  }
+
+  .submit-properties,
+  .signup-button,
+  .signin-button {
+    width: 280px;
+  }
+
+  .recipe-square {
+    width: 320px;
+  }
+
+  .recipe-properties,
+  .recipe-post-button,
+  .textarea-prop {
+    width: 295px;
+  }
+
+  .recipe-title-head {
+    font-size: 20px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: 90px;
+    top: -40px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 200px;
+  }
+  
+}
+
+@media screen and (max-width: 300px) {
+  .logo1 {
+    font-size: 15px;
+  }
+
+  .logo2 {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .square,
+  .square-signin {
+    width: 280px;
+
+  }
+
+  .submit-properties,
+  .signup-button,
+  .signin-button {
+    width: 260px;
+  }
+
+  .recipe-square {
+    width: 260px;
+  }
+
+  .recipe-properties,
+  .recipe-post-button,
+  .textarea-prop {
+    width: 220px;
+  }
+
+  .recipe-title-head {
+    font-size: 25px;
+  }
+
+  .comment {
+    position: relative;
+  }
+
+  .comment-button {
+    position: relative;
+    left: 75px;
+    top: -40px;
+  }
+
+  .comment-box,
+  .card-style-comment {
+    width: 200px;
+  }
+
+  .userName {
+    margin-left: -5px;
+    font-size: 20px;
+  }
+
+  .create-button, 
+  .Logout-button {
+    position: relative;
+    left: -100px;
+    top: -10px;
+  }
+
+  .Recipe-heading {
+    margin-left: 10px;
+  }
+
+  .card-style {
+    width: 290px;
+  }
+
+}
+
+
+/* Optimising for responsive height */
+@media screen and (max-height: 1400px) {
+  .submit {
+    margin-top: -140px
+  }
+
+  .Homepage-back1 {
+    height: 65vh;
+  }
+
+  .About-back2 {
+    height: 70vh;
+  }
+
+  .Share-back3 {
+    height: 60vh;
+  }
+
+  .submit-signin {
+    margin-top: -140px;
+  }
+
+  .footer {
+    margin-top: -80px;
+    padding: 90px;
+  }
+
+  .recipe-submit {
+    padding-top: 200px;
+  }
+
+}
+
+@media screen and (max-height: 1300px) {
+  .submit {
+    padding-top: 240px;
+  }
+
+  .submit-signin {
+    margin-top: -110px;
+  }
+
+  .Homepage-back1 {
+    height: 70vh;
+  }
+
+  .About-back2 {
+    height: 75vh;
+  }
+
+  .Share-back3 {
+    height: 70vh;
+  }
+
+  .footer {
+    margin-top: -80px;
+    padding: 90px;
+  }
+
+  .recipe-submit {
+    padding-top: 250px;
+  }
+  
+}
+
+@media screen and (max-height: 1200px) {
+  .submit {
+    padding-top: 310px;
+  }
+
+  .submit-signin {
+    margin-top: -85px;
+  }
+
+  .Homepage-back1 {
+    height: 75vh;
+  }
+
+  .About-back2 {
+    height: 80vh;
+  }
+
+  .Share-back3 {
+    height: 75vh;
+  }
+
+  .footer {
+    margin-top: -80px;
+    padding: 90px;
+  }
+
+  .recipe-submit {
+    padding-top: 300px;
+  }
+  
+}
+
+@media screen and (max-height: 1100px) {
+  .submit {
+    padding-top: 360px;
+  }
+
+  .submit-signin {
+    margin-top: -50px;
+  }
+
+  .Homepage-back1 {
+    height: 80vh;
+  }
+
+  .About-back2 {
+    height: 90vh;
+  }
+
+  .Share-back3 {
+    height: 80vh;
+  }
+
+  .footer {
+    margin-top: -80px;
+    padding: 90px;
+  }
+
+  .recipe-submit {
+    padding-top: 350px;
+  }
+  
 }
 
 @media screen and (max-height: 1000px) {
+  .submit {
+    padding-top: 420px;
+  }
+
+  .submit-signin {
+    margin-top: -20px;
+  }
+
+  .Homepage-back1 {
+    height: 90vh;
+  }
+
+  .About-back2 {
+    height: 100vh;
+  }
+
+  .Share-back3 {
+    height: 90vh;
+  }
+
+  .footer {
+    margin-top: -80px;
+    padding: 90px;
+  }
+
+  .recipe-submit {
+    padding-top: 415px;
+  }
 
 }
                                             
-
 @media screen and (max-height: 900px) {
   .submit {
-    padding-top: 180px;
+    padding-top: 450px;
   }
+
+  .submit-signin {
+    padding-top: 50px;
+  }
+
+  .Homepage-back1 {
+    height: 100vh;
+  }
+
+  .About-back2 {
+    height: 110vh;
+  }
+
+  .Share-back3 {
+    height: 100vh;
+  }
+
+  .footer {
+    margin-top: -60px;
+    padding: 120px;
+  }
+
+  .recipe-submit {
+    padding-top: 480px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .submit {
+    padding-top: 530px;
+  }
+
+  .submit-signin {
+    padding-top: 110px;
+  }
+
+  .Homepage-back1 {
+    height: 110vh;
+  }
+
+  .About-back2 {
+    height: 125vh;
+  }
+
+  .Share-back3 {
+    height: 115vh;
+  }
+
+  .footer {
+    margin-top: -50px;
+    padding: 110px;
+  }
+
+  .recipe-submit {
+    padding-top: 550px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .submit {
+    padding-top: 560px;
+  }
+
+  .submit-signin {
+    padding-top: 170px;
+  }
+
+  .Homepage-back1 {
+    height: 120vh;
+  }
+
+  .About-back2 {
+    height: 140vh;
+  }
+
+  .Share-back3 {
+    height: 130vh;
+  }
+
+  .footer {
+    margin-top: -40px;
+    padding: 80px;
+  }
+
+  .recipe-submit {
+    padding-top: 620px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .submit {
+    padding-top: 650px;
+  }
+
+  .submit-signin {
+    padding-top: 240px;
+  }
+
+  .Homepage-back1 {
+    height: 150vh;
+  }
+
+  .About-back2 {
+    height: 165vh;
+  }
+
+  .Share-back3 {
+    height: 150vh;
+  }
+
+  .footer {
+    margin-top: -30px;
+    padding: 70px;
+  }
+
+  .recipe-submit {
+    padding-top: 675px;
+  }
+
+}
+
+@media screen and (max-height: 500px) {
+  .submit {
+    padding-top: 700px;
+  }
+
+  .submit-signin {
+    padding-top: 300px;
+  }
+
+  .Homepage-back1 {
+    height: 180vh;
+  }
+
+  .About-back2 {
+    height: 200vh;
+  }
+
+  .Share-back3 {
+    height: 180vh;
+  }
+
+  .footer {
+    margin-top: -30px;
+    padding: 55px;
+  }
+
+  .recipe-submit {
+    padding-top: 720px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .submit {
+    padding-top: 730px;
+  }
+
+  .submit-signin {
+    padding-top: 330px;
+  }
+
+  .Homepage-back1 {
+    height: 205vh;
+  }
+
+  .About-back2 {
+    height: 225vh;
+  }
+
+  .Share-back3 {
+    height: 195vh;
+  }
+
+  .footer {
+    margin-top: -5px;
+    padding: 50px;
+  }
+
+  .recipe-submit {
+    padding-top: 760px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .submit {
+    padding-top: 775px;
+  }
+
+  .submit-signin {
+    padding-top: 350px;
+  }
+
+  .Homepage-back1 {
+    height: 230vh;
+  }
+
+  .About-back2 {
+    height: 250vh;
+  }
+
+  .Share-back3 {
+    height: 230vh;
+  }
+
+  .footer {
+    margin-top: -50px;
+    padding: 35px;
+  }
+
+  .recipe-submit {
+    padding-top: 780px;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .submit {
+    padding-top: 800px;
+  }
+
+  .submit-signin {
+    padding-top: 380px;
+  }
+
+  .Homepage-back1 {
+    height: 260vh;
+  }
+
+  .About-back2 {
+    height: 290vh;
+  }
+
+  .Share-back3 {
+    height: 260vh;
+  }
+
+  .footer {
+    margin-top: -40px;
+    padding: 65px;
+  }
+
+  .recipe-submit {
+    padding-top: 800px;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .submit {
+    padding-top: 850px;
+  }
+
+  .submit-signin {
+    padding-top: 410px;
+  }
+
+  .Homepage-back1 {
+    height: 305vh;
+  }
+
+  .About-back2 {
+    height: 335vh;
+  }
+
+  .Share-back3 {
+    height: 305vh;
+  }
+
+  .footer {
+    margin-top: -45px;
+  }
+
+  .recipe-submit {
+    padding-top: 850px;
+  }
+
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import { Button } from "@mui/material";
 import { loggedInContext, reciepCreateContext } from "../Context";
 
@@ -107,24 +106,27 @@ function RecipeCreate() {
                     required
                 />
 
-                <TextareaAutosize
-                    style={{width: 450, height: 150}}
+                <TextField
+                    id="outlined-multiline-static"
+                    label="Ingredients"
+                    multiline
+                    rows={5}
                     className="textarea-prop"
                     type="textarea"
                     name="ingredients"
-                    placeholder="Ingredients"
                     value={recipe.ingredients}
                     onChange={handleChange}
                     required
                 />
 
-                <TextareaAutosize
-                    style={{width: 450, height: 150}}
+                <TextField
+                    id="outlined-multiline-static"
+                    label="Method"
+                    multiline
+                    rows={5}
                     className="textarea-prop"
-                    variant="outlined"
-                    type="text"
+                    type="textarea"
                     name="method"
-                    placeholder="Method"
                     value={recipe.method}
                     onChange={handleChange}
                     required

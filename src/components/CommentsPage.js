@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { commentContext, loggedInContext } from "../Context";
 import { Button } from "@mui/material";
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import TextField from '@mui/material/TextField';
 
 
 function CommenetsPage({recipeId}) {
@@ -53,7 +54,7 @@ function CommenetsPage({recipeId}) {
             <form className="comment" onSubmit={handleSubmit}>
                 <TextareaAutosize
                     className="comment-box"
-                    style={{width: 950, height: 50, borderRadius: 5}}
+                    style={{height: 50, borderRadius: 5}}
                     type="textarea"
                     name="body"
                     placeholder="Start the conversation"

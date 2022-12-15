@@ -10,8 +10,8 @@ function RecipePageNav({handleLogout, userInfo}) {
                 BAZZAR
             </div>
             
-            <div className="recipe-nav">
-                <ul>
+            <div className="recipe-nav-items">
+                <ul className="recipe-nav-menu">
                     <li>
                         <div className="userName">
                             Welcome, {typeof userInfo === 'string' ? userInfo.split('@')[0] : "ERROR"}

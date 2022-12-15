@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import { recipeContext } from "../Context";
-import Likes from "./Likes";
 import { loggedInContext, getUserInfoContext } from "../Context";
 
 export default function OutlinedCard() {
@@ -73,10 +72,6 @@ export default function OutlinedCard() {
                                     </div>
                                 )
                             }) : "no"}
-
-                            <div className="recipe-like">
-                                <Likes recipeId={showRecipe.id} showId={loggedIn.user.id}/>
-                            </div>
                             
                         </CardContent>
 

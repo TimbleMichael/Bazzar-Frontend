@@ -3,13 +3,11 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
-
-
 function Navbar() {
     return(
         <nav className="nav">
             <a href="/" className="Navbar-logo">BAZZAR</a>
-            <ul>
+            <ul className="nav-menu">
                 <li>
                     <HashLink className="link" smooth to='#About'>About</HashLink>
                 </li>
@@ -28,6 +26,12 @@ function Navbar() {
                     </Link>
                 </li>
             </ul>
+
+            
+
+       
+
+
         </nav>
     )
 }
