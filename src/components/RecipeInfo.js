@@ -42,11 +42,13 @@ import { getCommentContext, getUserInfoContext } from "../Context";
           <Card>
             <CardContent className="recipe-info-card">
               <div className="info-title">{location.state.showRecipe.title}</div>
-              <div className="info-general">Serves: {location.state.showRecipe.serving_size}</div>
-              <div className="info-general">Cooking Time: {location.state.showRecipe.cook_time} minutes</div>
-              <div className="info-general">Prep Time: {location.state.showRecipe.prep_time} minutes</div>
-              <div className="info-ingredients">Ingredients: {location.state.showRecipe.ingredients}</div>
-              <div className="info-method">Method: {location.state.showRecipe.method}</div>
+              <div className="info-general"> <div className="info-color">Serves</div> {location.state.showRecipe.serving_size}</div>
+              <div className="info-general"><div className="info-color">Cooking time</div>{location.state.showRecipe.cook_time} minutes</div>
+              <div className="info-general"><div className="info-color">Prep time</div> {location.state.showRecipe.prep_time} minutes</div>
+              <div className="info-ingredients">Ingredients</div>
+              <div className="info-ingredients-1">{location.state.showRecipe.ingredients}</div>
+              <div className="info-method">Method</div>
+              <div className="info-method-1">{location.state.showRecipe.method}</div>
             </CardContent>
           </Card>
 
