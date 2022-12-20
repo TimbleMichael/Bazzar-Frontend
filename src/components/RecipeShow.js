@@ -68,7 +68,7 @@ export default function OutlinedCard() {
                                 return(
                                     <div key={userInfo.id}>
                                        {showRecipe.user_id === userInfo.id ? 
-                                        <div className="recipe-user"> {userInfo.email.split('@')[0]} </div> : ""}
+                                        <div className="recipe-user">by {userInfo.email.split('@')[0]} </div> : ""}
                                     </div>
                                 )
                             }) : "no"}
