@@ -489,7 +489,7 @@ hr {
   font-weight: 600;
   font-size: 20px;
   color: #1D9637;
-  margin-left: -350px;
+  text-align: center;
 }
 
 /* Optimising for responsive width */
